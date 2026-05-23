@@ -1,0 +1,285 @@
+/* fluid.css */
+.visual-fluid {
+    /* Define overall theme tokens */
+    --fluid-blur: 24px;
+    --fluid-opacity: 0.12;
+    --fluid-border: rgba(255, 255, 255, 0.2);
+    --fluid-text: #fff;
+    color: var(--fluid-text);
+}
+
+.visual-fluid .card, 
+.visual-fluid .glass,
+.visual-fluid .bg-white:not(.print\:bg-white),
+.visual-fluid .bg-slate-50,
+.visual-fluid .bg-slate-100,
+.visual-fluid .bg-slate-200,
+.visual-fluid .bg-indigo-50,
+.visual-fluid .bg-indigo-100,
+.visual-fluid .dark\:bg-slate-900,
+.visual-fluid .bg-slate-900 {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(var(--fluid-blur)) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(var(--fluid-blur)) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    /* Liquid amoeba shape border radius */
+    border-radius: 40px 20px 50px 30px / 30px 50px 20px 40px !important;
+    box-shadow: 
+        0 10px 40px 0 rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    transition: 
+        border-radius 2s ease-in-out, 
+        transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: visible;
+    color: #ffffff;
+}
+
+.visual-fluid .question-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(var(--fluid-blur)) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(var(--fluid-blur)) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 2rem !important;
+    box-shadow: 
+        0 10px 40px 0 rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    overflow: visible;
+    color: #ffffff;
+}
+
+.visual-fluid .card:hover, 
+.visual-fluid .glass:hover {
+    border-radius: 20px 50px 30px 40px / 50px 30px 40px 20px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Fluid UI Elements */
+:where(.visual-fluid) button:not(.no-fluid),
+:where(.visual-fluid) .btn {
+    position: relative;
+    border-radius: 30px 15px 25px 20px / 20px 25px 15px 30px;
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    overflow: visible;
+}
+
+/* Give buttons an internal fluid shifting shape */
+:where(.visual-fluid) button:not(.no-fluid)::before,
+:where(.visual-fluid) .btn::before {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.6s ease;
+    transform: scale(0.4) translate(0, 50%);
+    pointer-events: none;
+}
+
+:where(.visual-fluid) button:not(.no-fluid):hover::before,
+:where(.visual-fluid) .btn:hover::before {
+    opacity: 1;
+    transform: scale(1.3) translate(0, 0);
+}
+
+:where(.visual-fluid) button:not(.no-fluid):hover,
+:where(.visual-fluid) .btn:hover {
+    border-radius: 15px 30px 20px 25px / 25px 15px 30px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Fluid specific theme selections */
+.visual-fluid[data-theme-color^="fluid-gold"] { --accent-color: #ffaa00; }
+.visual-fluid[data-theme-color^="fluid-emerald"] { --accent-color: #10b981; }
+.visual-fluid[data-theme-color^="fluid-crimson"] { --accent-color: #ef4444; }
+.visual-fluid[data-theme-color^="fluid-violet"] { --accent-color: #8a2be2; }
+
+/* Ensure typography remains highly readable over fluid BG */
+.visual-fluid h1, 
+.visual-fluid h2, 
+.visual-fluid h3, 
+.visual-fluid h4 {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.visual-fluid p, 
+.visual-fluid span,
+.visual-fluid label,
+.visual-fluid div:not([class*="bg-"]):not([class*="text-indigo"]):not([class*="text-emerald"]):not([class*="text-rose"]) {
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.visual-fluid .text-slate-900,
+.visual-fluid .text-slate-800,
+.visual-fluid .text-slate-700,
+.visual-fluid .text-slate-600,
+.visual-fluid .text-slate-500,
+.visual-fluid .text-slate-400 {
+    color: #ffffff !important;
+}
+
+.visual-fluid .text-indigo-500,
+.visual-fluid .text-indigo-600,
+.visual-fluid .text-indigo-700,
+.visual-fluid .text-indigo-800 {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.visual-fluid .border-2,
+.visual-fluid .border {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.visual-fluid svg {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+    color: #ffffff !important;
+}
+
+.visual-fluid .text-emerald-500,
+.visual-fluid .text-emerald-600 {
+    color: #34d399 !important;
+    text-shadow: 0 0 10px rgba(52, 211, 153, 0.4);
+}
+
+.visual-fluid .text-rose-500,
+.visual-fluid .text-rose-600 {
+    color: #fb7185 !important;
+    text-shadow: 0 0 10px rgba(251, 113, 133, 0.4);
+}
+
+.visual-fluid input, 
+.visual-fluid textarea, 
+.visual-fluid select,
+.visual-fluid .bg-slate-50\/50,
+.visual-fluid .dark\:bg-slate-800\/50 {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 20px 15px 25px 20px / 15px 25px 20px 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    backdrop-filter: blur(8px) !important;
+    transition: all 0.3s ease;
+}
+
+.visual-fluid input:focus, 
+.visual-fluid textarea:focus, 
+.visual-fluid select:focus {
+    border-color: rgba(255,255,255,0.6) !important;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1) !important;
+    outline: none !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Specific component fixes for legibility */
+.visual-fluid .cursor-grab,
+.visual-fluid .cursor-pointer,
+.visual-fluid [draggable="true"] {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
+    backdrop-filter: blur(12px) !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+}
+
+.visual-fluid .is-correct {
+    background: rgba(16, 185, 129, 0.4) !important;
+    border-color: rgba(16, 185, 129, 0.6) !important;
+    color: #ffffff !important;
+}
+
+.visual-fluid .is-incorrect {
+    background: rgba(244, 63, 94, 0.4) !important;
+    border-color: rgba(244, 63, 94, 0.6) !important;
+    color: #ffffff !important;
+}
+
+/* Ensure blanks are visible */
+.visual-fluid .border-dashed {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fluid Progress UI */
+.visual-fluid .fluid-progress-container {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 9999px !important;
+}
+
+.visual-fluid .fluid-progress-fill {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%) !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6) !important;
+    border-radius: 9999px !important;
+}
+
+.visual-fluid .fluid-progress-panel {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 2rem !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3) !important;
+}
+
+.visual-fluid .fluid-header {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.visual-fluid .fluid-logo-container {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2) !important;
+    animation: fluid-morphism-blob 10s ease-in-out infinite alternate !important;
+}
+
+@keyframes fluid-morphism-blob {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.visual-fluid .fluid-settings-item {
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.visual-fluid .fluid-settings-item:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Floating animation for modals */
+@keyframes fluid-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-8px) rotate(0.4deg); }
+    66% { transform: translateY(2px) rotate(-0.4deg); }
+}
+
+.visual-fluid .modal-content,
+.visual-fluid [role="dialog"] {
+    animation: fluid-float 8s ease-in-out infinite;
+}

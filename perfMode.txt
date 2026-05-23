@@ -1,0 +1,144 @@
+src/components/EmissiveBlackHoleEffects.tsx:export const EmissiveBlackHoleBackground = ({ performanceMode, settings }: any) => {
+src/components/EmissiveBlackHoleEffects.tsx:    const emissiveParticleCount = settings?.emissiveParticleCount ?? (performanceMode ? 1500 : 4000);
+src/components/EmissiveBlackHoleEffects.tsx:      antialias: !performanceMode, 
+src/components/EmissiveBlackHoleEffects.tsx:      if (performanceMode) {
+src/components/EmissiveBlackHoleEffects.tsx:  }, [performanceMode, settings?.emissiveShape, settings?.emissiveParticleCount, settings?.emissiveCustomBackground, settings?.emissiveCustomBackgroundType]);
+src/components/powers/InteractivePowers.tsx:  performanceMode?: boolean;
+src/components/powers/InteractivePowers.tsx:export const InteractivePowersOverlay: React.FC<InteractivePowersOverlayProps> = ({ activePowers, onPowerEnd, onGrantPower, theme, performanceMode, allowedPowerIds }) => {
+src/components/powers/InteractivePowers.tsx:          <ClickChallenge key="click_challenge" onComplete={() => onPowerEnd('click_challenge')} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:          <CircleHunt key="circle_hunt" onComplete={() => onPowerEnd('circle_hunt')} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:          }} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:          <BugSquasher key="bug_squasher" onComplete={() => onPowerEnd('bug_squasher')} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:          <PatternLock key="pattern_lock" onComplete={() => onPowerEnd('pattern_lock')} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:          <SliderUnlock key="slider_unlock" onComplete={() => onPowerEnd('slider_unlock')} theme={theme} performanceMode={performanceMode} />
+src/components/powers/InteractivePowers.tsx:const ClickChallenge: React.FC<{ onComplete: () => void; theme: AppTheme; performanceMode?: boolean }> = ({ onComplete, theme, performanceMode }) => {
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/90 flex flex-col items-center justify-center pointer-events-auto cursor-pointer select-none ${performanceMode ? '' : 'backdrop-blur-xl'}`}
+src/components/powers/InteractivePowers.tsx:        {!performanceMode && <div className="absolute inset-0 bg-indigo-500/20 blur-[120px] rounded-full -z-10" />}
+src/components/powers/InteractivePowers.tsx:        {!performanceMode && shake > 0 && (
+src/components/powers/InteractivePowers.tsx:const CircleHunt: React.FC<{ onComplete: () => void; theme: AppTheme; performanceMode?: boolean }> = ({ onComplete, theme, performanceMode }) => {
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/95 pointer-events-auto overflow-hidden ${performanceMode ? '' : 'backdrop-blur-2xl'}`}
+src/components/powers/InteractivePowers.tsx:      {!performanceMode && (
+src/components/powers/InteractivePowers.tsx:const SpinWheel: React.FC<{ onComplete: (prize: Power | { id: 'jackpot' } | null) => void; theme: AppTheme; performanceMode?: boolean; allowedPowerIds?: string[] }> = ({ onComplete, theme, performanceMode, allowedPowerIds }) => {
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/90 flex flex-col items-center justify-center pointer-events-auto overflow-hidden ${performanceMode ? '' : 'backdrop-blur-xl'}`}
+src/components/powers/InteractivePowers.tsx:const BugSquasher: React.FC<{ onComplete: () => void; theme: AppTheme; performanceMode?: boolean }> = ({ onComplete, theme, performanceMode }) => {
+src/components/powers/InteractivePowers.tsx:    }, performanceMode ? 60 : 30);
+src/components/powers/InteractivePowers.tsx:  }, [performanceMode]);
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/90 pointer-events-auto overflow-hidden ${performanceMode ? '' : 'backdrop-blur-xl'}`}
+src/components/powers/InteractivePowers.tsx:const PatternLock: React.FC<{ onComplete: () => void; theme: AppTheme; performanceMode?: boolean }> = ({ onComplete, theme, performanceMode }) => {
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/95 flex flex-col items-center justify-center pointer-events-auto ${performanceMode ? '' : 'backdrop-blur-2xl'}`}
+src/components/powers/InteractivePowers.tsx:const SliderUnlock: React.FC<{ onComplete: () => void; theme: AppTheme; performanceMode?: boolean }> = ({ onComplete, theme, performanceMode }) => {
+src/components/powers/InteractivePowers.tsx:      className={`fixed inset-0 z-[10005] bg-slate-950/90 flex flex-col items-center justify-center pointer-events-auto ${performanceMode ? '' : 'backdrop-blur-xl'}`}
+src/components/powers/PowerMenu.tsx:                          performanceMode={true}
+src/components/powers/PowerMenu.tsx:                          performanceMode={true}
+src/components/powers/OffensivePowers.tsx:  performanceMode?: boolean;
+src/components/powers/OffensivePowers.tsx:export const OffensivePowersOverlay: React.FC<OffensivePowersOverlayProps> = ({ activePowers, onPowerEnd, theme, performanceMode }) => {
+src/components/powers/OffensivePowers.tsx:        <JuiceEffect performanceMode={performanceMode} />
+src/components/powers/OffensivePowers.tsx:          {[...Array(performanceMode ? 2 : 5)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:          {!performanceMode && [...Array(10)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:            filter: blur(${performanceMode ? '1px' : '2px'}) contrast(120%) brightness(110%);
+src/components/powers/OffensivePowers.tsx:          {!performanceMode && [...Array(5)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:          {[...Array(performanceMode ? 4 : 8)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:              className={`absolute w-48 h-48 sm:w-80 sm:h-80 bg-slate-950 mix-blend-multiply ${performanceMode ? '' : 'blur-2xl'}`}
+src/components/powers/OffensivePowers.tsx:                filter: performanceMode ? 'none' : 'contrast(150%) brightness(80%)',
+src/components/powers/OffensivePowers.tsx:          {!performanceMode && (
+src/components/powers/OffensivePowers.tsx:          className={`absolute inset-0 z-[10002] bg-slate-200/30 pointer-events-none ${performanceMode ? '' : 'backdrop-blur-sm'}`}
+src/components/powers/OffensivePowers.tsx:          {[...Array(performanceMode ? 3 : 6)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:              className={`absolute w-96 h-96 bg-white/20 rounded-full ${performanceMode ? '' : 'blur-3xl'}`}
+src/components/powers/OffensivePowers.tsx:          {[...Array(performanceMode ? 6 : 15)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:            className={`absolute inset-0 bg-sky-100/10 ${performanceMode ? '' : 'backdrop-blur-[1px]'}`}
+src/components/powers/OffensivePowers.tsx:              className={`absolute w-full h-48 bg-gradient-to-b from-white/40 to-transparent pointer-events-none ${performanceMode ? '' : 'blur-2xl'}`}
+src/components/powers/OffensivePowers.tsx:          {[...Array(performanceMode ? 6 : 12)].map((_, i) => (
+src/components/powers/OffensivePowers.tsx:              className={`absolute w-32 h-32 bg-white/20 ${performanceMode ? '' : 'blur-xl'}`}
+src/components/powers/OffensivePowers.tsx:const JuiceEffect: React.FC<{ performanceMode?: boolean }> = ({ performanceMode }) => {
+src/components/HollowKnightEffects.tsx:export const HollowKnightBackground: React.FC<{ active: boolean; accent?: string; performanceMode?: boolean; view?: string }> = ({ active, accent, performanceMode = false, view = 'home' }) => {
+src/components/HollowKnightEffects.tsx:      <HollowKnightScene isSilksong={isSilksong} performanceMode={performanceMode} view={view} />
+src/components/HollowKnightEffects.tsx:      <DustParticles active={active && view === 'home'} color={particleColor} count={performanceMode ? 20 : (isSilksong ? 50 : 40)} />
+src/components/HollowKnightEffects.tsx:const HollowKnightScene: React.FC<{ isSilksong: boolean; performanceMode: boolean; view?: string }> = ({ isSilksong, performanceMode, view = 'home' }) => {
+src/components/HollowKnightEffects.tsx:  if (performanceMode || view !== 'home') {
+src/components/HollowKnightEffects.tsx:export const SoulAbsorption: React.FC<{ active: boolean; color?: string; performanceMode?: boolean }> = ({ active, color = "#ffffff", performanceMode = false }) => {
+src/components/HollowKnightEffects.tsx:    const particleCount = performanceMode ? 10 : 20;
+src/components/HollowKnightBackgroundEffect.tsx:      const particleCount = (uiCustomization && uiCustomization.performanceMode) ? 5 : 12;
+src/components/HollowKnightBackgroundEffect.tsx:  }, [variant, view, uiCustomization?.performanceMode]);
+src/components/UICustomizationModal.tsx:              onClick={() => setUICustomization({ ...uiCustomization, performanceMode: !uiCustomization.performanceMode })}
+src/components/UICustomizationModal.tsx:              className={`p-0 w-12 h-6 rounded-full transition-all duration-300 relative cursor-pointer no-hat ${uiCustomization.performanceMode ? `${arcane.accent} shadow-lg ${isArcane ? arcane.glow : 'shadow-emerald-500/40'}` : 'bg-slate-200 dark:bg-slate-600'} group-[.visual-liquid-glass]/liquid-glass:!bg-white/10 group-[.visual-liquid-glass]/liquid-glass:!shadow-none group-[.visual-liquid-glass]/liquid-glass:!border group-[.visual-liquid-glass]/liquid-glass:!border-white/20 group-[.visual-fluid]/fluid:!bg-white/10 group-[.visual-fluid]/fluid:!shadow-none group-[.visual-fluid]/fluid:!border group-[.visual-fluid]/fluid:!border-white/20`}
+src/components/UICustomizationModal.tsx:                animate={{ x: uiCustomization.performanceMode ? 26 : 2 }}
+src/components/UICustomizationModal.tsx:                performanceMode: false,
+src/components/VirusTheme.tsx:export const VirusBackground = ({ accentColor, isDark, performanceMode, optimizationMode, isActive = true }: { accentColor: string, isDark?: boolean, performanceMode?: boolean, optimizationMode?: boolean, isActive?: boolean }) => {
+src/components/VirusTheme.tsx:  if (performanceMode) return null;
+src/components/BubblesBlackHoleEffects.tsx:  performanceMode?: boolean;
+src/components/BubblesBlackHoleEffects.tsx:  performanceMode,
+src/components/BubblesBlackHoleEffects.tsx:    if (performanceMode || !canvasRef.current) return;
+src/components/BubblesBlackHoleEffects.tsx:  }, [performanceMode, hue, safeMultiplier, settings?.bubblesMicroParticles]);
+src/components/BubblesBlackHoleEffects.tsx:      {!performanceMode && (
+src/components/UltimateBackground.tsx:    if (animation === 'none' || uiCustomization?.performanceMode) return {};
+src/components/UltimateBackground.tsx:  }, [uiCustomization?.performanceMode]);
+src/components/UltimateBackground.tsx:    if (uiCustomization?.performanceMode) return 'auto';
+src/types.ts:  performanceMode: boolean;
+src/App.tsx:const SuperheroBackground = ({ accentColor, performanceMode, optimizationMode, isDark }: { accentColor?: AccentColor, performanceMode?: boolean, optimizationMode?: boolean, isDark?: boolean }) => {
+src/App.tsx:  if (performanceMode) return null;
+src/App.tsx:const MinecraftDynamicBackground = ({ accentColor, performanceMode, optimizationMode }: { accentColor?: AccentColor, performanceMode?: boolean, optimizationMode?: boolean }) => (
+src/App.tsx:    {!performanceMode && (
+src/App.tsx:const SuperheroClickEffect = ({ active, isHome, accentColor, performanceMode, superheroAttackIndex = 0 }: { active: boolean; isHome: boolean; accentColor: string; performanceMode: boolean; superheroAttackIndex?: number }) => {
+src/App.tsx:    if (!active || !isHome || performanceMode) {
+src/App.tsx:      if (!isHome || performanceMode) return;
+src/App.tsx:  }, [active, isHome, performanceMode, superheroAttackIndex]);
+src/App.tsx:  if (!active || !isHome || performanceMode) return null;
+src/App.tsx:const ArcaneBackground = ({ performanceMode, accentColor, isDark, isHome, uiCustomization }: { performanceMode: boolean, accentColor: AccentColor, isDark: boolean, isHome: boolean, uiCustomization?: UICustomization }) => {
+src/App.tsx:        {performanceMode && <PerformanceShapes accentColor={accentColor} isDark={isDark} />}
+src/App.tsx:      {!performanceMode && (
+src/App.tsx:      {!performanceMode && <ArcaneCanvas accentColor={accentColor} isDark={isDark} isHome={isHome} uiCustomization={uiCustomization} />}
+src/App.tsx:const AdventureTimeDynamicBackground = ({ accentColor, isDark, isHome, performanceMode, optimizationMode }: { accentColor?: AccentColor, isDark: boolean, isHome: boolean, performanceMode?: boolean, optimizationMode?: boolean }) => {
+src/App.tsx:      {!performanceMode && (
+src/App.tsx:          {!performanceMode && !optimizationMode && (
+src/App.tsx:          {!performanceMode && (
+src/App.tsx:          {!performanceMode && <FinnCharacter className="absolute bottom-[10%] left-[50%] w-[15vw] max-w-[200px] min-w-[120px] drop-shadow-xl animate-bounce-soft" />}
+src/App.tsx:          {!performanceMode && (
+src/App.tsx:          {!performanceMode && (
+src/App.tsx:          {!performanceMode && <div className="absolute inset-0 opacity-30 dark:opacity-10 bg-[radial-gradient(circle_at_center,_#FFB900_0%,_transparent_70%)]" />}
+src/App.tsx:          {!performanceMode && <JakeCharacter className="absolute bottom-[10%] left-[50%] w-[15vw] max-w-[200px] min-w-[120px] drop-shadow-xl jake-stretch-anim" style={{ transformOrigin: 'bottom center' }} />}
+src/App.tsx:          {!performanceMode && (
+src/App.tsx:      {isHome && !performanceMode && (isFinn ? <FinnClickOverlay /> : <JakeStretchOverlay />)}
+src/App.tsx:const SaidiBackground = ({ performanceMode, optimizationMode }: { performanceMode?: boolean, optimizationMode?: boolean }) => (
+src/App.tsx:    {!performanceMode && (
+src/App.tsx:const ModernBackground = ({ performanceMode, optimizationMode }: { performanceMode?: boolean, optimizationMode?: boolean }) => (
+src/App.tsx:    {!performanceMode && (
+src/App.tsx:const KingerButterfly = ({ performanceMode, optimizationMode }: { performanceMode?: boolean, optimizationMode?: boolean }) => {
+src/App.tsx:  if (performanceMode || optimizationMode) return null;
+src/App.tsx:const TadcBackground = ({ accentColor, isDarkMode, performanceMode, optimizationMode }: { accentColor: string, isDarkMode: boolean, performanceMode?: boolean, optimizationMode?: boolean }) => {
+src/App.tsx:        {!performanceMode && (
+src/App.tsx:                <KingerButterfly performanceMode={performanceMode} optimizationMode={optimizationMode} />
+src/App.tsx:                <KingerButterfly performanceMode={performanceMode} optimizationMode={optimizationMode} />
+src/App.tsx:      {!performanceMode && (
+src/App.tsx:const DuckBackground = ({ theme, performanceMode, optimizationMode }: { theme: AppTheme, performanceMode?: boolean, optimizationMode?: boolean }) => {
+src/App.tsx:    {!performanceMode && (
+src/App.tsx:const UndertaleBackground = ({ theme, performanceMode, optimizationMode }: { theme: AppTheme, performanceMode?: boolean, optimizationMode?: boolean }) => {
+src/App.tsx:    if (theme.visualStyle !== 'undertale' || performanceMode) return;
+src/App.tsx:  }, [theme.visualStyle, isChara, performanceMode]);
+src/App.tsx:      {!performanceMode && (
+src/App.tsx:  performanceMode = false
+src/App.tsx:  performanceMode?: boolean
+src/App.tsx:            performanceMode={performanceMode}
+src/App.tsx:            performanceMode={performanceMode}
+src/App.tsx:        performanceMode: false,
+src/App.tsx:        performanceMode: false,
+src/App.tsx:    const disableBlur = !uiCustomization.blurEnabled || uiCustomization.performanceMode || uiCustomization.optimizationMode;
+src/App.tsx:    const disableShadows = !uiCustomization.shadowsEnabled || uiCustomization.performanceMode || uiCustomization.optimizationMode;
+src/App.tsx:    if (uiCustomization.performanceMode) {
+src/App.tsx:    <MotionConfig reducedMotion={uiCustomization.performanceMode ? "always" : "user"}>
+src/App.tsx:          <VirusBackground accentColor={theme.accentColor} isDark={darkMode} performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} isActive={view === 'home'} />
+src/App.tsx:        <BubblesBlackHoleBackground features={uiCustomization} accentColor={theme.accentColor} isDark={darkMode} performanceMode={uiCustomization?.performanceMode} settings={theme.blackHoleSettings} />
+src/App.tsx:        <EmissiveBlackHoleBackground performanceMode={uiCustomization?.performanceMode} settings={theme.blackHoleSettings} />
+src/App.tsx:              <HollowKnightBackground active={true} accent={theme.accentColor} performanceMode={uiCustomization.performanceMode} view={view} />
+src/App.tsx:              performanceMode={uiCustomization.performanceMode}
+src/App.tsx:        <SuperheroBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} accentColor={theme.accentColor} isDark={darkMode} />
+src/App.tsx:        <MinecraftDynamicBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} accentColor={theme.accentColor} />
+src/App.tsx:        <TadcBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} accentColor={theme.accentColor} isDarkMode={darkMode} />
+src/App.tsx:        <ModernBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} />
+src/App.tsx:        <DuckBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} theme={theme} />
+src/App.tsx:        <UndertaleBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} theme={theme} />
+src/App.tsx:        <SaidiBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} />
+src/App.tsx:        <ArcaneBackground performanceMode={uiCustomization.performanceMode} accentColor={theme.accentColor} isDark={darkMode} isHome={view === 'home'} uiCustomization={uiCustomization} />
+src/App.tsx:        <AdventureTimeDynamicBackground performanceMode={uiCustomization.performanceMode} optimizationMode={uiCustomization.optimizationMode} accentColor={theme.accentColor} isDark={darkMode} isHome={view === 'home'} />
+src/App.tsx:                  performanceMode={uiCustomization.performanceMode}
+src/App.tsx:                performanceMode={uiCustomization.performanceMode}
+src/App.tsx:        performanceMode={uiCustomization.performanceMode} 

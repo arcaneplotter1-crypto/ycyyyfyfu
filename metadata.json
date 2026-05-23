@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Remix: Arcane EXAM",
+  "description": "Convert CSV or JSON data into interactive exams with customizable settings and real-time feedback.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

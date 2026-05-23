@@ -1,0 +1,17 @@
+  const [settings, setSettings] = useState<ExamSettings>(() => {
+                onClick={() => setSettings({ ...settings, timeLimitType: type })}
+                onChange={(e) => setSettings({ ...settings, timeLimitValue: parseInt(e.target.value) || 0 })}
+            setSettings({ ...settings, instantFeedback: !settings.instantFeedback });
+          onClick={() => setSettings({ ...settings, essaysLast: !settings.essaysLast })}
+          onClick={() => setSettings({ ...settings, imagesLast: !settings.imagesLast })}
+          onClick={() => setSettings({ ...settings, randomizeQuestions: !settings.randomizeQuestions })}
+          onClick={() => setSettings({ ...settings, rpgModeEnabled: !settings.rpgModeEnabled })}
+            onClick={() => setSettings({ ...settings, powerSystemEnabled: !settings.powerSystemEnabled })}
+                  onClick={() => setSettings({ ...settings, guaranteedPowerPerCorrect: !settings.guaranteedPowerPerCorrect })}
+  const [settings, setSettings] = useState<ExamSettings>(() => {
+    setSettings(s);
+    setSettings(item.settings);
+            setRpgModeEnabled={(v) => setSettings({ ...settings, rpgModeEnabled: v })}
+            updateSettings={(s) => setSettings(prev => prev ? { ...prev, ...s } : { ...s } as ExamSettings)}
+                    setSettings(examSettings);
+                      setSettings(roomSettings);
